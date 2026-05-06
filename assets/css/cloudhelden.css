@@ -29,12 +29,13 @@ body {
     linear-gradient(135deg, rgba(15,76,145,0.08), rgba(56,198,217,0.08)),
     #f8fbff;
   color: var(--ch-dark);
-  padding: 24px;
+  padding: clamp(8px, 2vw, 24px);
 }
 
 .cloudhelden-app {
-  width: min(980px, 100%);
-  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
   background: rgba(255,255,255,0.96);
   border: 1px solid var(--ch-border);
   border-radius: var(--ch-radius);
