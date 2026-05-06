@@ -168,12 +168,13 @@ button.primary:hover {
 
 .zones {
   display: grid;
-  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  grid-template-columns: 1fr 1fr !important;
   gap: 14px;
 }
 
 .zone {
   min-height: 360px;
+  min-width: 0;
   border: 3px dashed #9db7d6;
   border-radius: 20px;
   padding: 14px;
@@ -271,11 +272,11 @@ button.primary:hover {
   border-color: var(--ch-cyan);
 }
 
-@media (max-width: 520px) {
+/* @media (max-width: 520px) {
   .zones {
     grid-template-columns: 1fr;
   }
-}
+} */
 
 @media (max-width: 720px) {
   .cloudhelden-app {
