@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VM oder Container?</title>
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body data-depth="../..">
+  <main class="cloudhelden-app">
+    <div data-ch-header></div>
+
+    <section class="ch-card">
+      <p>Ziehe jede Aussage in die passende Kategorie. Danach kannst du deine Lösung auswerten.</p>
+      <div id="cards" class="cards"></div>
+
+      <div class="zones">
+        <div class="zone" data-type="vm">
+          <h2>Virtuelle Maschine</h2>
+          <p>Eigenes Gast-OS, eigener Kernel, starke Isolation.</p>
+        </div>
+        <div class="zone" data-type="container">
+          <h2>Container</h2>
+          <p>Teilt sich den Host-Kernel, enthält App + Libs.</p>
+        </div>
+      </div>
+
+      <button class="ch-btn" id="check">Auswerten</button>
+      <p id="result"></p>
+    </section>
+
+    <div data-ch-footer></div>
+  </main>
+
+  <script src="../../assets/js/shared.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

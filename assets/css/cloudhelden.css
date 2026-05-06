@@ -1,0 +1,251 @@
+:root {
+  --ch-blue: #0f4c91;
+  --ch-blue-2: #155aa7;
+  --ch-dark: #071326;
+  --ch-cyan: #38c6d9;
+  --ch-purple: #3530a3;
+  --ch-light: #f4f8fc;
+  --ch-surface: #ffffff;
+  --ch-muted: #5b6b82;
+  --ch-border: #d7e3f0;
+  --ch-success: #22c55e;
+  --ch-error: #ef4444;
+  --ch-warning: #f59e0b;
+  --ch-radius: 22px;
+  --ch-shadow: 0 18px 45px rgba(7, 19, 38, 0.14);
+}
+
+* { box-sizing: border-box; }
+
+html { min-height: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(56,198,217,0.24), transparent 30%),
+    radial-gradient(circle at top right, rgba(53,48,163,0.17), transparent 35%),
+    linear-gradient(135deg, rgba(15,76,145,0.08), rgba(56,198,217,0.08)),
+    #f8fbff;
+  color: var(--ch-dark);
+  padding: 24px;
+}
+
+.cloudhelden-app {
+  width: min(980px, 100%);
+  margin: 0 auto;
+  background: rgba(255,255,255,0.96);
+  border: 1px solid var(--ch-border);
+  border-radius: var(--ch-radius);
+  padding: 28px;
+  box-shadow: var(--ch-shadow);
+}
+
+.ch-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--ch-border);
+}
+
+.ch-logo {
+  width: 82px;
+  height: 82px;
+  object-fit: contain;
+  border-radius: 16px;
+  background: white;
+  padding: 8px;
+  border: 1px solid var(--ch-border);
+}
+
+.ch-kicker,
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--ch-blue), var(--ch-purple));
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+h1, h2, h3 { color: var(--ch-blue); margin-top: 0; }
+h1 { margin: 8px 0 4px; font-size: clamp(1.7rem, 4vw, 2.5rem); line-height: 1.1; }
+h2 { font-size: 1.35rem; }
+p { color: var(--ch-muted); line-height: 1.55; }
+
+.ch-btn,
+button.primary {
+  border: 0;
+  border-radius: 14px;
+  padding: 13px 18px;
+  background: linear-gradient(135deg, var(--ch-blue), var(--ch-purple));
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(15, 76, 145, 0.22);
+}
+
+.ch-btn:hover,
+button.primary:hover { opacity: 0.92; }
+
+.ch-card {
+  background: var(--ch-surface);
+  border: 1px solid var(--ch-border);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(7, 19, 38, 0.07);
+}
+
+.ch-footer {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--ch-border);
+  font-size: 0.9rem;
+  color: var(--ch-muted);
+}
+
+/* Game 1: Matching */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.card {
+  background: var(--ch-light);
+  border: 2px solid var(--ch-border);
+  border-radius: 16px;
+  padding: 14px;
+  cursor: grab;
+  width: 260px;
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(7, 19, 38, 0.08);
+  font-weight: 650;
+}
+
+.card:active { cursor: grabbing; }
+
+.zones {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.zone {
+  min-height: 320px;
+  border: 3px dashed #9db7d6;
+  border-radius: 20px;
+  padding: 18px;
+  background: #f9fcff;
+  transition: 0.15s ease;
+}
+
+.zone.over {
+  background: #e6f8fb;
+  border-color: var(--ch-cyan);
+  transform: translateY(-2px);
+}
+
+.correct {
+  border-color: var(--ch-success) !important;
+  background: #ecfdf5 !important;
+}
+
+.wrong {
+  border-color: var(--ch-error) !important;
+  background: #fef2f2 !important;
+}
+
+#result,
+#feedback {
+  margin-top: 18px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+/* Game 2: Quiz */
+.question {
+  font-size: 1.22rem;
+  font-weight: 850;
+  margin-bottom: 18px;
+  color: var(--ch-dark);
+}
+
+.answer {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 16px;
+  border: 2px solid var(--ch-border);
+  border-radius: 16px;
+  background: var(--ch-light);
+  color: var(--ch-dark);
+  cursor: pointer;
+  text-align: left;
+  font-weight: 700;
+  transition: 0.15s ease;
+}
+
+.answer:hover {
+  background: #e6f8fb;
+  border-color: var(--ch-cyan);
+}
+
+.answer.selected {
+  border-color: var(--ch-blue);
+  background: #eaf2ff;
+}
+
+.progress-wrap {
+  width: 100%;
+  height: 12px;
+  border-radius: 999px;
+  background: #e6edf7;
+  overflow: hidden;
+  margin: 12px 0 22px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--ch-cyan), var(--ch-blue));
+  transition: width 0.25s ease;
+}
+
+.game-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.game-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.game-link .ch-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--ch-cyan);
+}
+
+@media (max-width: 720px) {
+  body { padding: 12px; }
+  .cloudhelden-app { padding: 18px; }
+  .ch-header { align-items: flex-start; }
+  .ch-logo { width: 62px; height: 62px; }
+  .zones { grid-template-columns: 1fr; }
+  .card { width: 100%; }
+}

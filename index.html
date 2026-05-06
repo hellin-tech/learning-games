@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloudhelden Learning Games</title>
+  <link rel="stylesheet" href="assets/css/cloudhelden.css">
+</head>
+<body data-depth=".">
+  <main class="cloudhelden-app">
+    <div data-ch-header></div>
+
+    <p>Wähle ein interaktives Mini-Spiel aus. Jede Aufgabe kann einzeln per iframe in LearnWorlds eingebettet werden.</p>
+
+    <div class="game-list">
+      <a class="game-link" href="games/vm-container-match/">
+        <div class="ch-card">
+          <h2>VM oder Container?</h2>
+          <p>Drag-and-Drop-Zuordnung zu virtuellen Maschinen und Containern.</p>
+        </div>
+      </a>
+      <a class="game-link" href="games/novatech-quiz/">
+        <div class="ch-card">
+          <h2>NovaTech Entscheidungsquiz</h2>
+          <p>Quizfragen zu Motivation, Namespaces, cgroups und OCI.</p>
+        </div>
+      </a>
+    </div>
+
+    <div data-ch-footer></div>
+  </main>
+
+  <script src="assets/js/shared.js"></script>
+  <script>
+    Cloudhelden.renderHeader({
+      kicker: "Docker & Containerisierung",
+      title: "Cloudhelden Learning Games",
+      subtitle: "Interaktive Übungen zu Container-Grundlagen"
+    });
+    Cloudhelden.renderFooter();
+  </script>
+</body>
+</html>
