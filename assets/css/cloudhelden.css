@@ -390,3 +390,57 @@ button.primary:hover {
 .wrong-box {
   border: 2px solid var(--ch-warning);
 }
+
+
+.mission-card {
+  margin-top: 20px;
+}
+
+.answer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.incident-terminal {
+  min-height: 240px;
+  color: #d7e3f0;
+}
+
+.story-line {
+  font-family: monospace;
+  font-size: 1rem;
+  line-height: 1.7;
+  padding: 12px;
+}
+
+.success-banner {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(34,197,94,0.2);
+  border: 1px solid var(--ch-success);
+  color: #86efac;
+  font-weight: 800;
+  text-align: center;
+}
+
+.failure-banner {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(239,68,68,0.2);
+  border: 1px solid var(--ch-error);
+  color: #fca5a5;
+  font-weight: 800;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+
+  .answer-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
