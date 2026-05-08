@@ -315,3 +315,78 @@ button.primary:hover {
   }
 
 }
+
+.terminal {
+  background: #071326;
+  border-radius: 18px;
+  padding: 18px;
+  margin: 24px 0;
+  overflow-x: auto;
+}
+
+.line {
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: #d7e3f0;
+  cursor: pointer;
+  margin-bottom: 8px;
+  font-family: monospace;
+  transition: 0.15s ease;
+}
+
+.line:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.line.selected {
+  background: rgba(56,198,217,0.25);
+  border-left: 4px solid var(--ch-cyan);
+}
+
+.layer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.layer-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--ch-light);
+  border: 1px solid var(--ch-border);
+  padding: 16px;
+  border-radius: 16px;
+  font-family: monospace;
+  font-weight: 700;
+}
+
+.layer-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.layer-controls button {
+  border: 0;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: white;
+  font-size: 1rem;
+}
+
+.builder-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.correct-box {
+  border: 2px solid var(--ch-success);
+}
+
+.wrong-box {
+  border: 2px solid var(--ch-warning);
+}

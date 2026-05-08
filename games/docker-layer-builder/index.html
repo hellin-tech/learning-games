@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Docker Layer Builder</title>
+
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+
+    <img
+      src="../../assets/images/cloudhelden-logo.png"
+      class="ch-logo"
+      alt="Cloudhelden">
+
+    <div>
+      <span class="badge">Docker Layer System</span>
+
+      <h1>Docker Layer Builder</h1>
+
+      <p>
+        Bringe die Dockerfile-Schritte in die optimale Reihenfolge.
+      </p>
+    </div>
+
+  </div>
+
+  <div id="layers" class="layer-list"></div>
+
+  <div class="builder-actions">
+
+    <button class="primary" id="checkBtn">
+      Reihenfolge prüfen
+    </button>
+
+    <button id="shuffleBtn">
+      Neu mischen
+    </button>
+
+  </div>
+
+  <div id="feedback"></div>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>

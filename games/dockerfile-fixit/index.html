@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dockerfile Fix-It Challenge</title>
+
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+
+    <img
+      src="../../assets/images/cloudhelden-logo.png"
+      class="ch-logo"
+      alt="Cloudhelden">
+
+    <div>
+      <span class="badge">Dockerfile Optimierung</span>
+
+      <h1>Dockerfile Fix-It Challenge</h1>
+
+      <p>
+        Finde die problematischen Zeilen im Dockerfile.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="terminal">
+
+    <div class="line" data-correct="true">
+      FROM python:3.11
+    </div>
+
+    <div class="line" data-correct="true">
+      COPY . /app
+    </div>
+
+    <div class="line" data-correct="false">
+      WORKDIR /app
+    </div>
+
+    <div class="line" data-correct="false">
+      RUN pip install -r requirements.txt
+    </div>
+
+    <div class="line" data-correct="true">
+      RUN apt-get update && apt-get install -y curl vim htop
+    </div>
+
+    <div class="line" data-correct="false">
+      CMD [\"python\", \"main.py\"]
+    </div>
+
+  </div>
+
+  <button class="primary" id="checkBtn">
+    Auswerten
+  </button>
+
+  <div id="feedback"></div>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
