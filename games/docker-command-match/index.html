@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docker Command Match</title>
+
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+    <img
+      src="../../assets/images/cloudhelden-logo.png"
+      class="ch-logo"
+      alt="Cloudhelden">
+
+    <div>
+      <span class="badge">Docker Grundlagen</span>
+      <h1>Docker Command Match</h1>
+      <p>Ordne die Docker-Befehle der richtigen Funktion zu.</p>
+    </div>
+  </div>
+
+  <div id="cards" class="cards"></div>
+
+  <div class="zones command-zones">
+
+    <div class="zone" data-type="run">
+      <h2>docker run</h2>
+      <p>Startet einen Container aus einem Image.</p>
+    </div>
+
+    <div class="zone" data-type="ps">
+      <h2>docker ps</h2>
+      <p>Zeigt laufende Container an.</p>
+    </div>
+
+    <div class="zone" data-type="stop">
+      <h2>docker stop</h2>
+      <p>Stoppt einen laufenden Container.</p>
+    </div>
+
+    <div class="zone" data-type="rm">
+      <h2>docker rm</h2>
+      <p>Entfernt einen Container.</p>
+    </div>
+
+  </div>
+
+  <button class="primary" id="checkBtn">
+    Auswerten
+  </button>
+
+  <div id="result"></div>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
