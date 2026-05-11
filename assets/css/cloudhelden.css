@@ -461,3 +461,28 @@ button.primary:hover {
     grid-template-columns: 1fr;
   }
 }
+
+.compose-zones {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.compose-zone {
+  min-height: 330px;
+}
+
+.code-card {
+  font-family: monospace;
+}
+
+.case-card {
+  margin-bottom: 18px;
+}
+
+@media (max-width: 900px) {
+  .compose-zones {
+    grid-template-columns: 1fr;
+  }
+}

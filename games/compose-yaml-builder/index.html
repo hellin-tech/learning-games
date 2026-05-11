@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Compose YAML Builder</title>
+
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+    <img
+      src="../../assets/images/cloudhelden-logo.png"
+      class="ch-logo"
+      alt="Cloudhelden">
+
+    <div>
+      <span class="badge">Docker Compose</span>
+      <h1>Compose YAML Builder</h1>
+      <p>Ordne die YAML-Bausteine dem richtigen Bereich zu.</p>
+    </div>
+  </div>
+
+  <div id="cards" class="cards"></div>
+
+  <div class="compose-zones">
+
+    <div class="zone compose-zone" data-type="services">
+      <h2>services:</h2>
+      <p>Container und ihre Konfiguration.</p>
+    </div>
+
+    <div class="zone compose-zone" data-type="networks">
+      <h2>networks:</h2>
+      <p>Docker-Netzwerke der Anwendung.</p>
+    </div>
+
+    <div class="zone compose-zone" data-type="volumes">
+      <h2>volumes:</h2>
+      <p>Persistente Speicherbereiche.</p>
+    </div>
+
+  </div>
+
+  <button class="primary" id="checkBtn">
+    YAML prüfen
+  </button>
+
+  <div id="feedback"></div>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
