@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Docker Network Architect</title>
+
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+
+    <img
+      src="../../assets/images/cloudhelden-logo.png"
+      class="ch-logo"
+      alt="Cloudhelden">
+
+    <div>
+      <span class="badge">Docker Netzwerke</span>
+
+      <h1>Docker Network Architect</h1>
+
+      <p>
+        Ordne die NovaTech-Container dem passenden Netzwerk zu.
+      </p>
+    </div>
+
+  </div>
+
+  <div id="cards" class="cards"></div>
+
+  <div class="network-zones">
+
+    <div class="zone network-zone" data-type="frontend">
+      <h2>novatech-frontend</h2>
+      <p>Von außen erreichbare Services.</p>
+    </div>
+
+    <div class="zone network-zone" data-type="backend">
+      <h2>novatech-backend</h2>
+      <p>Interne Services und Datenbank.</p>
+    </div>
+
+    <div class="zone network-zone" data-type="both">
+      <h2>beide Netzwerke</h2>
+      <p>Brücke zwischen Frontend und Backend.</p>
+    </div>
+
+  </div>
+
+  <button class="primary" id="checkBtn">
+    Architektur prüfen
+  </button>
+
+  <div id="feedback"></div>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
