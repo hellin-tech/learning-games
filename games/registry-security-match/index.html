@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Registry Security Match</title>
+
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+
+    <img
+      src="../../assets/images/cloudhelden-logo.png"
+      class="ch-logo"
+      alt="Cloudhelden">
+
+    <div>
+
+      <span class="badge">Registry Security</span>
+
+      <h1>Registry Security Match</h1>
+
+      <p>
+        Ordne das richtige Security-Werkzeug dem passenden Problem zu.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div id="cards" class="cards"></div>
+
+  <div class="security-zones">
+
+    <div class="zone security-zone" data-type="registry">
+      <h2>Private Registry</h2>
+      <p>Kontrollierter Zugriff auf Images.</p>
+    </div>
+
+    <div class="zone security-zone" data-type="scanner">
+      <h2>Trivy Scanner</h2>
+      <p>Findet bekannte CVEs.</p>
+    </div>
+
+    <div class="zone security-zone" data-type="signing">
+      <h2>Cosign</h2>
+      <p>Prüft Authentizität und Integrität.</p>
+    </div>
+
+    <div class="zone security-zone" data-type="tagging">
+      <h2>Versionierung</h2>
+      <p>Reproduzierbare Deployments.</p>
+    </div>
+
+  </div>
+
+  <button class="primary" id="checkBtn">
+    Security-Konzept prüfen
+  </button>
+
+  <div id="feedback"></div>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
