@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Production Incident Simulator</title>
+
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+
+    <img
+      src="../../assets/images/cloudhelden-logo.png"
+      class="ch-logo"
+      alt="Cloudhelden">
+
+    <div>
+
+      <span class="badge">Production Incident</span>
+
+      <h1>Production Incident Simulator</h1>
+
+      <p>
+        Triff Entscheidungen während NovaTechs Produktionsausfall.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="status-grid">
+
+    <div class="status-card">
+      <h3>Stabilität</h3>
+      <div class="big-score" id="stabilityValue">50</div>
+    </div>
+
+    <div class="status-card">
+      <h3>Sicherheit</h3>
+      <div class="big-score" id="securityValue">50</div>
+    </div>
+
+    <div class="status-card">
+      <h3>Verfügbarkeit</h3>
+      <div class="big-score" id="availabilityValue">50</div>
+    </div>
+
+  </div>
+
+  <div id="scenarioBox"></div>
+
+  <div class="decision-grid" id="decisionGrid"></div>
+
+  <div id="feedback"></div>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>

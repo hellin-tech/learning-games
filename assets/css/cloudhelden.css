@@ -509,3 +509,54 @@ button.primary:hover {
     grid-template-columns: 1fr;
   }
 }
+
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.status-card {
+  background: white;
+  border: 1px solid var(--ch-border);
+  border-radius: 18px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(7, 19, 38, 0.07);
+}
+
+.big-score {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--ch-blue);
+}
+
+.decision-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.radar-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.radar-zone {
+  min-height: 420px;
+}
+
+@media (max-width: 900px) {
+
+  .status-grid,
+  .decision-grid,
+  .radar-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

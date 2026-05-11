@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Docker vs Kubernetes Radar</title>
+
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+
+    <img
+      src="../../assets/images/cloudhelden-logo.png"
+      class="ch-logo"
+      alt="Cloudhelden">
+
+    <div>
+
+      <span class="badge">Compose vs Kubernetes</span>
+
+      <h1>Docker vs Kubernetes Radar</h1>
+
+      <p>
+        Ordne die Anforderungen der richtigen Plattform zu.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div id="cards" class="cards"></div>
+
+  <div class="radar-grid">
+
+    <div class="zone radar-zone" data-type="compose">
+
+      <h2>Docker Compose</h2>
+
+      <p>
+        Single-Host Multi-Container Anwendungen
+      </p>
+
+    </div>
+
+    <div class="zone radar-zone" data-type="kubernetes">
+
+      <h2>Kubernetes</h2>
+
+      <p>
+        Skalierung, Multi-Host, Self-Healing
+      </p>
+
+    </div>
+
+  </div>
+
+  <button class="primary" id="checkBtn">
+    Architektur prüfen
+  </button>
+
+  <div id="feedback"></div>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
