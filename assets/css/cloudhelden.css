@@ -444,3 +444,20 @@ button.primary:hover {
   }
 
 }
+
+.network-zones {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.network-zone {
+  min-height: 330px;
+}
+
+@media (max-width: 900px) {
+  .network-zones {
+    grid-template-columns: 1fr;
+  }
+}
