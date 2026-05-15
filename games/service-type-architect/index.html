@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Service Type Architect</title>
+
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+
+    <img
+      src="../../assets/images/cloudhelden-logo.png"
+      class="ch-logo"
+      alt="Cloudhelden">
+
+    <div>
+      <span class="badge">Kubernetes Services</span>
+
+      <h1>Service Type Architect</h1>
+
+      <p>
+        Ordne jede Netzwerk-Anforderung dem passenden Kubernetes-Zugang zu.
+      </p>
+    </div>
+
+  </div>
+
+  <div id="cards" class="cards"></div>
+
+  <div class="service-type-grid">
+
+    <div class="zone service-type-zone" data-type="clusterip">
+      <h2>ClusterIP</h2>
+      <p>Nur intern im Cluster erreichbar.</p>
+    </div>
+
+    <div class="zone service-type-zone" data-type="nodeport">
+      <h2>NodePort</h2>
+      <p>Extern erreichbar über Node-IP und festen Port.</p>
+    </div>
+
+    <div class="zone service-type-zone" data-type="loadbalancer">
+      <h2>LoadBalancer</h2>
+      <p>Cloud-Load-Balancer für Produktion.</p>
+    </div>
+
+    <div class="zone service-type-zone" data-type="ingress">
+      <h2>Ingress</h2>
+      <p>HTTP-Routing über Hostnamen und Pfade.</p>
+    </div>
+
+  </div>
+
+  <button class="primary" id="checkBtn">
+    Netzwerkentscheidung prüfen
+  </button>
+
+  <div id="feedback"></div>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>

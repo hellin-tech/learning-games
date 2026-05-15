@@ -560,3 +560,43 @@ button.primary:hover {
   }
 
 }
+
+.k8s-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.k8s-zone {
+  min-height: 430px;
+}
+
+@media (max-width: 900px) {
+  .k8s-choice-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-type-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.service-type-zone {
+  min-height: 360px;
+}
+
+@media (max-width: 1100px) {
+  .service-type-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .service-type-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rolling Update Simulator</title>
+
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+
+    <img
+      src="../../assets/images/cloudhelden-logo.png"
+      class="ch-logo"
+      alt="Cloudhelden">
+
+    <div>
+
+      <span class="badge">Rolling Updates</span>
+
+      <h1>Rolling Update Simulator</h1>
+
+      <p>
+        Aktualisiere die API-Pods ohne Downtime.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="deployment-grid" id="podGrid"></div>
+
+  <div class="ch-card">
+    <h3>Deployment-Regeln</h3>
+
+    <ul>
+      <li>replicas: 3</li>
+      <li>maxSurge: 1</li>
+      <li>maxUnavailable: 0</li>
+    </ul>
+  </div>
+
+  <div class="builder-actions">
+
+    <button class="primary" id="addBtn">
+      Neuen v1.3 Pod starten
+    </button>
+
+    <button id="removeBtn">
+      Alten v1.2 Pod entfernen
+    </button>
+
+  </div>
+
+  <div id="feedback"></div>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>

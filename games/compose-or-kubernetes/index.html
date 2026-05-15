@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Compose oder Kubernetes?</title>
+
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+
+    <img
+      src="../../assets/images/cloudhelden-logo.png"
+      class="ch-logo"
+      alt="Cloudhelden">
+
+    <div>
+      <span class="badge">Warum Kubernetes?</span>
+
+      <h1>Compose oder Kubernetes?</h1>
+
+      <p>
+        Entscheide, ab wann NovaTech wirklich Orchestrierung braucht.
+      </p>
+    </div>
+
+  </div>
+
+  <div id="cards" class="cards"></div>
+
+  <div class="k8s-choice-grid">
+
+    <div class="zone k8s-zone" data-type="compose">
+      <h2>Docker Compose reicht</h2>
+      <p>
+        Lokal, einfach, Single-Host, überschaubare Umgebung.
+      </p>
+    </div>
+
+    <div class="zone k8s-zone" data-type="kubernetes">
+      <h2>Kubernetes sinnvoll</h2>
+      <p>
+        Multi-Host, Auto-Scaling, Self-Healing, Rolling Updates.
+      </p>
+    </div>
+
+  </div>
+
+  <button class="primary" id="checkBtn">
+    Entscheidung prüfen
+  </button>
+
+  <div id="feedback"></div>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
