@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Config oder Secret?</title>
+
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+
+    <img
+      src="../../assets/images/cloudhelden-logo.png"
+      class="ch-logo"
+      alt="Cloudhelden">
+
+    <div>
+      <span class="badge">ConfigMaps & Secrets</span>
+
+      <h1>Config oder Secret?</h1>
+
+      <p>
+        Ordne die NovaTech-Konfigurationswerte richtig zu.
+      </p>
+    </div>
+
+  </div>
+
+  <div id="cards" class="cards"></div>
+
+  <div class="config-secret-grid">
+
+    <div class="zone config-secret-zone" data-type="configmap">
+      <h2>ConfigMap</h2>
+      <p>Nicht-sensible Konfiguration.</p>
+    </div>
+
+    <div class="zone config-secret-zone" data-type="secret">
+      <h2>Secret</h2>
+      <p>Passwörter, Tokens und sensible Werte.</p>
+    </div>
+
+  </div>
+
+  <button class="primary" id="checkBtn">
+    Zuordnung prüfen
+  </button>
+
+  <div id="feedback"></div>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
