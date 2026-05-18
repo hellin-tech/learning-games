@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Chart Architect</title>
+
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+
+    <img
+      src="../../assets/images/cloudhelden-logo.png"
+      class="ch-logo"
+      alt="Cloudhelden">
+
+    <div>
+
+      <span class="badge">Helm Structure</span>
+
+      <h1>Chart Architect</h1>
+
+      <p>
+        Baue ein vollständiges Helm Chart für NovaTech.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="match-grid">
+
+    <div class="drop-zone" data-match="chart">
+      <h3>Chart.yaml</h3>
+    </div>
+
+    <div class="drop-zone" data-match="values">
+      <h3>values.yaml</h3>
+    </div>
+
+    <div class="drop-zone" data-match="template">
+      <h3>templates/</h3>
+    </div>
+
+    <div class="drop-zone" data-match="helpers">
+      <h3>_helpers.tpl</h3>
+    </div>
+
+  </div>
+
+  <div id="cards" class="cards"></div>
+
+  <button class="primary" id="checkBtn">
+    Chart prüfen
+  </button>
+
+  <div id="feedback"></div>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>

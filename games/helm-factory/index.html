@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Helm Factory</title>
+
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+
+    <img
+      src="../../assets/images/cloudhelden-logo.png"
+      class="ch-logo"
+      alt="Cloudhelden">
+
+    <div>
+
+      <span class="badge">Helm Charts</span>
+
+      <h1>Helm Factory</h1>
+
+      <p>
+        Deploye NovaTechs Plattform mit den richtigen Helm-Befehlen.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="status-grid">
+
+    <div class="status-card">
+      <h3>Cluster-Zustand</h3>
+      <div id="clusterHealth">100%</div>
+    </div>
+
+    <div class="status-card">
+      <h3>Deployment-Fortschritt</h3>
+      <div id="progress">0%</div>
+    </div>
+
+    <div class="status-card">
+      <h3>Fehler</h3>
+      <div id="errors">0</div>
+    </div>
+
+  </div>
+
+  <div id="taskBox"></div>
+
+  <div id="answers" class="answer-grid"></div>
+
+  <div id="feedback"></div>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
