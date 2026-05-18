@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+
+  <title>PVC Matchmaker</title>
+
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+
+    <img
+      src="../../assets/images/cloudhelden-logo.png"
+      class="ch-logo"
+      alt="Cloudhelden">
+
+    <div>
+
+      <span class="badge">Stateful Kubernetes</span>
+
+      <h1>PVC Matchmaker</h1>
+
+      <p>
+        Finde die passende Storage-Architektur für jede NovaTech-Komponente.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div id="taskBox"></div>
+
+  <div id="dropZones" class="match-grid">
+
+    <div class="drop-zone" data-match="deployment">
+      <h3>Deployment</h3>
+    </div>
+
+    <div class="drop-zone" data-match="statefulset">
+      <h3>StatefulSet</h3>
+    </div>
+
+    <div class="drop-zone" data-match="rwo">
+      <h3>ReadWriteOnce</h3>
+    </div>
+
+    <div class="drop-zone" data-match="rwx">
+      <h3>ReadWriteMany</h3>
+    </div>
+
+    <div class="drop-zone" data-match="retain">
+      <h3>Retain</h3>
+    </div>
+
+    <div class="drop-zone" data-match="delete">
+      <h3>Delete</h3>
+    </div>
+
+  </div>
+
+  <div id="cards" class="cards"></div>
+
+  <button class="primary" id="checkBtn">
+    Architektur prüfen
+  </button>
+
+  <div id="feedback"></div>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
