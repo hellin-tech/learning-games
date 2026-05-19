@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Observability Control Center</title>
+
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+    <img
+      src="../../assets/images/cloudhelden-logo.png"
+      class="ch-logo"
+      alt="Cloudhelden">
+
+    <div>
+      <span class="badge">Monitoring & Logging</span>
+
+      <h1>Observability Control Center</h1>
+
+      <p>
+        Ordne NovaTechs Produktionsprobleme dem passenden Tool zu.
+      </p>
+    </div>
+  </div>
+
+  <div id="cards" class="cards"></div>
+
+  <div class="observability-grid">
+
+    <div class="zone observability-zone" data-type="prometheus">
+      <h2>Prometheus</h2>
+      <p>Metriken sammeln und mit PromQL abfragen.</p>
+    </div>
+
+    <div class="zone observability-zone" data-type="grafana">
+      <h2>Grafana</h2>
+      <p>Dashboards und Visualisierung.</p>
+    </div>
+
+    <div class="zone observability-zone" data-type="fluentbit">
+      <h2>Fluent Bit</h2>
+      <p>Logs von allen Nodes einsammeln.</p>
+    </div>
+
+    <div class="zone observability-zone" data-type="hpa">
+      <h2>HPA</h2>
+      <p>Pods automatisch skalieren.</p>
+    </div>
+
+    <div class="zone observability-zone" data-type="probes">
+      <h2>Probes</h2>
+      <p>Pod-Gesundheit und Traffic-Bereitschaft prüfen.</p>
+    </div>
+
+  </div>
+
+  <button class="primary" id="checkBtn">
+    Zuordnung prüfen
+  </button>
+
+  <div id="feedback"></div>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
