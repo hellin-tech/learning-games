@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Terraform Plan Detective</title>
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+    <img src="../../assets/images/cloudhelden-logo.png" class="ch-logo">
+
+    <div>
+      <span class="badge">Terraform</span>
+      <h1>Terraform Plan Detective</h1>
+      <p>Analysiere den Terraform-Plan und erkenne die Auswirkungen.</p>
+    </div>
+  </div>
+
+  <div class="status-grid">
+
+    <div class="status-card">
+      <h3>Richtige Analysen</h3>
+      <div id="score">0</div>
+    </div>
+
+    <div class="status-card">
+      <h3>Runde</h3>
+      <div id="round">1 / 5</div>
+    </div>
+
+  </div>
+
+  <div id="scenarioBox"></div>
+
+  <div id="answers" class="answer-grid"></div>
+
+  <div id="feedback"></div>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>ClickOps Audit Hunter</title>
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+    <img src="../../assets/images/cloudhelden-logo.png" class="ch-logo" alt="Cloudhelden">
+
+    <div>
+      <span class="badge">Infrastructure as Code</span>
+      <h1>ClickOps Audit Hunter</h1>
+      <p>Ordne Dr. Webers Audit-Befunde der richtigen Problemkategorie zu.</p>
+    </div>
+  </div>
+
+  <div id="cards" class="cards"></div>
+
+  <div class="iac-grid">
+
+    <div class="zone iac-zone" data-type="security">
+      <h2>Sicherheitsproblem</h2>
+      <p>Offene Ports, falsche Firewall-Regeln, riskante Einstellungen.</p>
+    </div>
+
+    <div class="zone iac-zone" data-type="drift">
+      <h2>Konfigurationsdrift</h2>
+      <p>Dev, Staging und Prod unterscheiden sich unkontrolliert.</p>
+    </div>
+
+    <div class="zone iac-zone" data-type="audit">
+      <h2>Fehlende Nachvollziehbarkeit</h2>
+      <p>Niemand weiß, wer wann was geändert hat.</p>
+    </div>
+
+  </div>
+
+  <button class="primary" id="checkBtn">Audit prüfen</button>
+
+  <div id="feedback"></div>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
