@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module Registry Review</title>
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+<div class="cloudhelden-app">
+  <div class="ch-header">
+    <img src="../../assets/images/cloudhelden-logo.png" class="ch-logo" alt="Cloudhelden">
+    <div>
+      <span class="badge">Terraform Modul-Best-Practices</span>
+      <h1>Module Registry Review</h1>
+      <p>Hilf Lisa, NovaTechs Modulentscheidungen sauber zu reviewen.</p>
+    </div>
+  </div>
+
+  <div class="status-grid">
+    <div class="status-card"><h3>Wiederverwendung</h3><div id="reuse">50</div></div>
+    <div class="status-card"><h3>Stabilität</h3><div id="stability">50</div></div>
+    <div class="status-card"><h3>Wartbarkeit</h3><div id="maintainability">50</div></div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <div id="caseBox" class="ch-card"></div>
+  <div id="answers" class="answer-grid"></div>
+  <div id="feedback"></div>
+
+  <button class="primary" id="checkBtn">Review prüfen</button>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>

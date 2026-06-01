@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Environment Architecture Builder</title>
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+<div class="cloudhelden-app">
+  <div class="ch-header">
+    <img src="../../assets/images/cloudhelden-logo.png" class="ch-logo" alt="Cloudhelden">
+    <div>
+      <span class="badge">Workspaces vs. Verzeichnisse</span>
+      <h1>Environment Architecture Builder</h1>
+      <p>Entscheide, welcher Umgebungstrennungs-Ansatz zu welcher NovaTech-Anforderung passt.</p>
+    </div>
+  </div>
+
+  <div id="cards" class="cards"></div>
+
+  <div class="k8s-choice-grid">
+    <div class="zone k8s-zone" data-type="workspace">
+      <h2>Terraform Workspaces</h2>
+      <p>Ein Code-Verzeichnis, mehrere States, ähnliche Umgebungen.</p>
+    </div>
+
+    <div class="zone k8s-zone" data-type="directory">
+      <h2>Verzeichnisstruktur</h2>
+      <p>environments/dev, staging, prod mit eigenem Backend und klarer Trennung.</p>
+    </div>
+  </div>
+
+  <button class="primary" id="checkBtn">Architektur prüfen</button>
+  <div id="feedback"></div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>

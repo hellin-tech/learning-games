@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaTech Audit Triage</title>
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+<div class="cloudhelden-app">
+  <div class="ch-header">
+    <img src="../../assets/images/cloudhelden-logo.png" class="ch-logo" alt="Cloudhelden">
+    <div>
+      <span class="badge">Infrastructure as Code</span>
+      <h1>NovaTech Audit Triage</h1>
+      <p>Hilf Lisa, Dr. Webers Audit-Befunde richtig einzuordnen.</p>
+    </div>
+  </div>
+
+  <div id="cards" class="cards"></div>
+
+  <div class="security-zones">
+    <div class="zone security-zone" data-type="drift">
+      <h2>Konfigurationsdrift</h2>
+      <p>Umgebungen weichen durch manuelle Änderungen voneinander ab.</p>
+    </div>
+
+    <div class="zone security-zone" data-type="traceability">
+      <h2>Fehlende Nachvollziehbarkeit</h2>
+      <p>Niemand weiß, wer was wann und warum geändert hat.</p>
+    </div>
+
+    <div class="zone security-zone" data-type="reproducibility">
+      <h2>Keine Reproduzierbarkeit</h2>
+      <p>Infrastruktur kann nicht zuverlässig identisch neu aufgebaut werden.</p>
+    </div>
+
+    <div class="zone security-zone" data-type="iac">
+      <h2>IaC-Gegenmaßnahme</h2>
+      <p>Code, Git, Review, Plan und automatisierte Anwendung.</p>
+    </div>
+  </div>
+
+  <button class="primary" id="checkBtn">Audit-Auswertung prüfen</button>
+  <div id="feedback"></div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>

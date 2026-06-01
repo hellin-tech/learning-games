@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terraform Plan Decoder</title>
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+<div class="cloudhelden-app">
+  <div class="ch-header">
+    <img src="../../assets/images/cloudhelden-logo.png" class="ch-logo" alt="Cloudhelden">
+    <div>
+      <span class="badge">Terraform Plan lesen</span>
+      <h1>Terraform Plan Decoder</h1>
+      <p>Entschlüssele Toms Plan-Ausgabe, bevor NovaTechs Infrastruktur verändert wird.</p>
+    </div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <div id="caseBox" class="ch-card"></div>
+  <div id="planBox" class="terminal"></div>
+  <div id="answers" class="answer-grid"></div>
+
+  <button class="primary" id="checkBtn">Analyse prüfen</button>
+  <div id="feedback"></div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>

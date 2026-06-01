@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lifecycle Safety Lab</title>
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+<div class="cloudhelden-app">
+  <div class="ch-header">
+    <img src="../../assets/images/cloudhelden-logo.png" class="ch-logo" alt="Cloudhelden">
+    <div>
+      <span class="badge">Provisioner & Lifecycle</span>
+      <h1>Lifecycle Safety Lab</h1>
+      <p>Wähle den richtigen Schutzmechanismus für kritische NovaTech-Ressourcen.</p>
+    </div>
+  </div>
+
+  <div class="status-grid">
+    <div class="status-card"><h3>Verfügbarkeit</h3><div id="availability">50</div></div>
+    <div class="status-card"><h3>Sicherheit</h3><div id="security">50</div></div>
+    <div class="status-card"><h3>Wartbarkeit</h3><div id="maintainability">50</div></div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <div id="caseBox" class="ch-card"></div>
+  <div id="answers" class="answer-grid"></div>
+  <div id="feedback"></div>
+
+  <button class="primary" id="checkBtn">Maßnahme prüfen</button>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HCL Refactor Builder</title>
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+<div class="cloudhelden-app">
+  <div class="ch-header">
+    <img src="../../assets/images/cloudhelden-logo.png" class="ch-logo" alt="Cloudhelden">
+    <div>
+      <span class="badge">Terraform HCL</span>
+      <h1>HCL Refactor Builder</h1>
+      <p>Ordne Toms hart kodierte Werte der richtigen HCL-Struktur zu.</p>
+    </div>
+  </div>
+
+  <div id="cards" class="cards"></div>
+
+  <div class="iac-grid">
+    <div class="zone iac-zone" data-type="variable">
+      <h2>variable</h2>
+      <p>Werte, die pro Umgebung von außen gesetzt werden.</p>
+    </div>
+
+    <div class="zone iac-zone" data-type="local">
+      <h2>locals</h2>
+      <p>Berechnete oder wiederverwendete interne Werte.</p>
+    </div>
+
+    <div class="zone iac-zone" data-type="output">
+      <h2>output</h2>
+      <p>Werte, die nach außen sichtbar sein sollen.</p>
+    </div>
+  </div>
+
+  <button class="primary" id="checkBtn">Refactoring prüfen</button>
+  <div id="feedback"></div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>

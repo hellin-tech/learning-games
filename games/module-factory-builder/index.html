@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module Factory Builder</title>
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+<div class="cloudhelden-app">
+  <div class="ch-header">
+    <img src="../../assets/images/cloudhelden-logo.png" class="ch-logo" alt="Cloudhelden">
+    <div>
+      <span class="badge">Terraform Module</span>
+      <h1>Module Factory Builder</h1>
+      <p>Baue NovaTechs wiederverwendbare Terraform-Modulbibliothek.</p>
+    </div>
+  </div>
+
+  <div id="cards" class="cards"></div>
+
+  <div class="security-zones">
+    <div class="zone security-zone" data-type="root">
+      <h2>Root-Modul</h2>
+      <p>Ruft Child-Module auf und verbindet sie.</p>
+    </div>
+
+    <div class="zone security-zone" data-type="child">
+      <h2>Child-Modul</h2>
+      <p>Wiederverwendbarer Infrastruktur-Baustein.</p>
+    </div>
+
+    <div class="zone security-zone" data-type="input">
+      <h2>Input</h2>
+      <p>Variable, die das Modul von außen bekommt.</p>
+    </div>
+
+    <div class="zone security-zone" data-type="output">
+      <h2>Output</h2>
+      <p>Wert, den andere Module nutzen können.</p>
+    </div>
+  </div>
+
+  <button class="primary" id="checkBtn">Moduldesign prüfen</button>
+  <div id="feedback"></div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
