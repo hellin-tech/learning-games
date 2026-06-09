@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IoT Architecture Builder</title>
+<link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+<div class="ch-header">
+<img src="../../assets/images/cloudhelden-logo.png" class="ch-logo" alt="Cloudhelden">
+
+<div>
+<span class="badge">IoT Architektur</span>
+<h1>IoT Architecture Builder</h1>
+<p>Baue die erste IIoT-Architektur für NovaTech.</p>
+</div>
+</div>
+
+<div class="ch-card">
+<h2>Mission</h2>
+<p>
+Ordne jede Komponente der richtigen IoT-Schicht zu.
+Sarah benötigt eine Architektur für die Vernetzung der CNC-Fräsen.
+</p>
+</div>
+
+<div id="cards" class="cards"></div>
+
+<div class="iac-grid">
+
+<div class="zone iac-zone" data-layer="perception">
+<h2>Wahrnehmungsschicht</h2>
+<p>Sensoren erfassen physische Werte.</p>
+</div>
+
+<div class="zone iac-zone" data-layer="network">
+<h2>Netzwerkschicht</h2>
+<p>Datenübertragung zwischen Geräten.</p>
+</div>
+
+<div class="zone iac-zone" data-layer="processing">
+<h2>Verarbeitungsschicht</h2>
+<p>Speichern, Filtern, Analysieren.</p>
+</div>
+
+<div class="zone iac-zone" data-layer="application">
+<h2>Anwendungsschicht</h2>
+<p>Dashboards, Alarme, Geschäftslogik.</p>
+</div>
+
+</div>
+
+<button id="checkBtn" class="primary">
+Architektur prüfen
+</button>
+
+<div id="feedback"></div>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
