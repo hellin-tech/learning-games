@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flux Detective</title>
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+    <img src="../../assets/images/cloudhelden-logo.png" class="ch-logo" alt="Cloudhelden">
+    <div>
+      <span class="badge">InfluxDB · Telegraf · Node-RED</span>
+      <h1>Flux Detective</h1>
+      <p>
+        Finde Datenmodell- und Pipelinefehler, bevor Sarahs Dashboard falsche oder langsame Werte zeigt.
+      </p>
+    </div>
+  </div>
+
+  <div class="status-grid">
+    <div class="status-card"><span>Beweise</span><div id="evidence">0</div></div>
+    <div class="status-card"><span>Performance</span><div id="performance">70</div></div>
+    <div class="status-card"><span>Wartbarkeit</span><div id="maintainability">70</div></div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <div class="detective-layout">
+    <section class="ch-card">
+      <span id="caseBadge" class="badge">Fall 1</span>
+      <h2 id="caseTitle"></h2>
+      <p id="caseText"></p>
+      <pre class="code-window" id="codeBox"></pre>
+    </section>
+
+    <section class="ch-card">
+      <h2>Deine Analyse</h2>
+      <div id="choices" class="choice-list"></div>
+      <button class="primary" id="checkBtn">Analyse prüfen</button>
+      <div id="feedback"></div>
+    </section>
+  </div>
+
+  <section class="ch-card final-report" id="finalReport" hidden>
+    <h2>Abschlussbericht</h2>
+
+    <label for="storageChoice">Welche Datenbank ist für NovaTechs Sensordaten passend?</label>
+    <select id="storageChoice">
+      <option value="">Bitte wählen</option>
+      <option value="influx">InfluxDB, weil Zeitreihen mit hohem Schreibdurchsatz und Zeitabfragen vorliegen</option>
+      <option value="postgres">PostgreSQL, weil alle Daten relational normalisiert werden sollten</option>
+      <option value="none">Keine Datenbank, MQTT reicht dauerhaft aus</option>
+    </select>
+
+    <label for="collectorChoice">Welche Rolle übernimmt Telegraf?</label>
+    <select id="collectorChoice">
+      <option value="">Bitte wählen</option>
+      <option value="collector">MQTT-Daten sammeln, transformieren und nach InfluxDB schreiben</option>
+      <option value="dashboard">Dashboards im Browser anzeigen</option>
+      <option value="broker">MQTT-Nachrichten zwischen Sensoren verteilen</option>
+    </select>
+
+    <label for="noderedChoice">Wofür ist Node-RED besonders geeignet?</label>
+    <select id="noderedChoice">
+      <option value="">Bitte wählen</option>
+      <option value="flows">Visuelle IoT-Flows, Prototypen und veränderbare Verarbeitungslogik</option>
+      <option value="storage">Langfristige Zeitreihenspeicherung</option>
+      <option value="index">Indexierung von InfluxDB-Tags</option>
+    </select>
+
+    <button class="primary" id="submitBtn">Bericht abschließen</button>
+    <div id="reportFeedback"></div>
+  </section>
+
+  <div class="ch-footer">Cloudhelden · Interaktive Lernaufgabe</div>
+
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>

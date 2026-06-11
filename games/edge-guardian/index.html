@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edge Guardian</title>
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+    <img src="../../assets/images/cloudhelden-logo.png" class="ch-logo" alt="Cloudhelden">
+    <div>
+      <span class="badge">IoT · Edge Computing</span>
+      <h1>Edge Guardian: Alarm vor Ort</h1>
+      <p>
+        Entscheide, welche Verarbeitung lokal auf dem Raspberry Pi laufen muss
+        und welche Daten zentral verarbeitet werden dürfen.
+      </p>
+    </div>
+  </div>
+
+  <div class="status-grid edge-status">
+    <div class="status-card"><span>Sicherheit</span><div id="safety">70</div></div>
+    <div class="status-card"><span>Bandbreite</span><div id="bandwidth">70</div></div>
+    <div class="status-card"><span>Latenz</span><div id="latency">70</div></div>
+    <div class="status-card"><span>Offline-Fähigkeit</span><div id="offline">70</div></div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <div class="edge-layout">
+    <section class="ch-card">
+      <span id="roundBadge" class="badge">Szenario 1</span>
+      <h2 id="title"></h2>
+      <p id="text"></p>
+      <div class="terminal edge-terminal" id="telemetry"></div>
+    </section>
+
+    <section class="ch-card">
+      <h2>Architekturentscheidung</h2>
+      <div id="answers" class="edge-actions"></div>
+      <button class="primary" id="nextBtn">Entscheidung prüfen</button>
+      <div id="feedback"></div>
+    </section>
+  </div>
+
+  <div class="ch-footer">Cloudhelden · Interaktive Lernaufgabe</div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>

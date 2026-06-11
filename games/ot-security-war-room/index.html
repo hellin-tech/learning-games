@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OT Security War Room</title>
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+  <div class="ch-header">
+    <img src="../../assets/images/cloudhelden-logo.png" class="ch-logo" alt="Cloudhelden">
+    <div>
+      <span class="badge">IoT Security · Purdue · MQTT TLS</span>
+      <h1>OT Security War Room</h1>
+      <p>Schließe Dr. Webers Security-Funde, bevor NovaTech das IoT-Projekt ausrollt.</p>
+    </div>
+  </div>
+
+  <div class="status-grid">
+    <div class="status-card"><span>Vertraulichkeit</span><div id="confidentiality">60</div></div>
+    <div class="status-card"><span>Integrität</span><div id="integrity">60</div></div>
+    <div class="status-card"><span>Segmentierung</span><div id="segmentation">40</div></div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <div class="war-layout">
+    <section class="ch-card">
+      <span id="caseBadge" class="badge">Audit-Fund 1</span>
+      <h2 id="caseTitle"></h2>
+      <p id="caseText"></p>
+      <div class="terminal" id="evidenceBox"></div>
+    </section>
+
+    <section class="ch-card">
+      <h2>Security-Maßnahme</h2>
+      <div id="choices" class="choice-stack"></div>
+      <button class="primary" id="nextBtn">Maßnahme prüfen</button>
+      <div id="feedback"></div>
+    </section>
+  </div>
+
+  <div class="ch-footer">Cloudhelden · Interaktive Lernaufgabe</div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>

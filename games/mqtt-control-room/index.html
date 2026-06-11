@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MQTT Control Room</title>
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+    <img src="../../assets/images/cloudhelden-logo.png" class="ch-logo" alt="Cloudhelden">
+    <div>
+      <span class="badge">IoT · MQTT · NovaTech</span>
+      <h1>MQTT Control Room</h1>
+      <p>
+        Triff Betriebsentscheidungen für NovaTechs IoT-Plattform.
+        Halte Zuverlässigkeit, Bandbreite, Skalierbarkeit und Sicherheit im grünen Bereich.
+      </p>
+    </div>
+  </div>
+
+  <div class="status-grid control-status">
+    <div class="status-card">
+      <span>Zuverlässigkeit</span>
+      <div id="reliability">70</div>
+    </div>
+    <div class="status-card">
+      <span>Bandbreite</span>
+      <div id="bandwidth">70</div>
+    </div>
+    <div class="status-card">
+      <span>Skalierbarkeit</span>
+      <div id="scalability">70</div>
+    </div>
+    <div class="status-card">
+      <span>Sicherheit</span>
+      <div id="safety">70</div>
+    </div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <div class="control-layout">
+    <section class="ch-card incident-panel">
+      <div class="incident-topline">
+        <span id="roundBadge" class="badge">Ereignis 1</span>
+        <span id="timer" class="timer">30s</span>
+      </div>
+
+      <h2 id="incidentTitle"></h2>
+      <p id="incidentText"></p>
+
+      <div class="terminal event-console" id="console"></div>
+    </section>
+
+    <section class="ch-card">
+      <h2>Entscheidung</h2>
+      <div id="choices" class="control-choices"></div>
+      <button class="primary" id="confirmBtn">Entscheidung übernehmen</button>
+      <div id="feedback"></div>
+    </section>
+  </div>
+
+  <div class="ch-footer">
+    Cloudhelden · Interaktive Lernaufgabe
+  </div>
+
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>

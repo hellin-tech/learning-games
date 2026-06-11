@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pipeline Commander</title>
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+    <img src="../../assets/images/cloudhelden-logo.png" class="ch-logo" alt="Cloudhelden">
+    <div>
+      <span class="badge">IoT · Datenpipeline</span>
+      <h1>Pipeline Commander</h1>
+      <p>
+        Repariere NovaTechs Datenstrom vom Sensor bis zur InfluxDB.
+        Entscheide, welche Komponente die richtige Aufgabe übernimmt.
+      </p>
+    </div>
+  </div>
+
+  <div class="status-grid">
+    <div class="status-card"><span>Durchsatz</span><div id="throughput">70</div></div>
+    <div class="status-card"><span>Datenqualität</span><div id="quality">70</div></div>
+    <div class="status-card"><span>Betrieb</span><div id="operations">70</div></div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <div class="pipeline-map">
+    <div class="pipe-node" id="nodeSensor">Sensor</div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-node" id="nodeMqtt">MQTT</div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-node" id="nodeTelegraf">Telegraf</div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-node" id="nodeInflux">InfluxDB</div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-node" id="nodeDash">Dashboard</div>
+  </div>
+
+  <div class="mission-layout">
+    <section class="ch-card">
+      <span id="badge" class="badge">Incident 1</span>
+      <h2 id="title"></h2>
+      <p id="text"></p>
+      <div class="terminal" id="logBox"></div>
+    </section>
+
+    <section class="ch-card">
+      <h2>Maßnahme</h2>
+      <div id="answers" class="answer-stack"></div>
+      <button class="primary" id="nextBtn">Maßnahme prüfen</button>
+      <div id="feedback"></div>
+    </section>
+  </div>
+
+  <div class="ch-footer">Cloudhelden · Interaktive Lernaufgabe</div>
+
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>

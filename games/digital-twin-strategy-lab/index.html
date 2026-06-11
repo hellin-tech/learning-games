@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Twin Strategy Lab</title>
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+  <div class="ch-header">
+    <img src="../../assets/images/cloudhelden-logo.png" class="ch-logo" alt="Cloudhelden">
+    <div>
+      <span class="badge">Digital Twin · Skalierung · Reflexion</span>
+      <h1>Digital Twin Strategy Lab</h1>
+      <p>Bewerte NovaTechs nächste IoT-Ausbaustufe vom Dashboard zum digitalen Zwilling.</p>
+    </div>
+  </div>
+
+  <div class="status-grid">
+    <div class="status-card"><span>Business Value</span><div id="business">65</div></div>
+    <div class="status-card"><span>Technische Reife</span><div id="maturity">60</div></div>
+    <div class="status-card"><span>Risiko</span><div id="risk">45</div></div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <div class="lab-layout">
+    <section class="ch-card">
+      <span id="labBadge" class="badge">Strategiefrage 1</span>
+      <h2 id="title"></h2>
+      <p id="text"></p>
+
+      <div class="twin-display" id="twinDisplay">
+        <div class="machine-box">CNC-Fräse</div>
+        <div class="machine-box">Sensordaten</div>
+        <div class="machine-box">Prognose</div>
+      </div>
+
+      <div class="terminal" id="contextBox"></div>
+    </section>
+
+    <section class="ch-card">
+      <h2>Strategische Entscheidung</h2>
+      <div id="choices" class="choice-stack"></div>
+      <button class="primary" id="nextBtn">Entscheidung bewerten</button>
+      <div id="feedback"></div>
+    </section>
+  </div>
+
+  <div class="ch-footer">Cloudhelden · Interaktive Lernaufgabe</div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>

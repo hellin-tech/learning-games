@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Broker Crisis</title>
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+    <img src="../../assets/images/cloudhelden-logo.png" class="ch-logo" alt="Cloudhelden">
+    <div>
+      <span class="badge">MQTT Incident Response</span>
+      <h1>Broker Crisis: Die verlorenen Nachrichten</h1>
+      <p>
+        Analysiere einen Produktionsvorfall bei NovaTech.
+        Finde die Ursache, bewerte Risiken und schreibe den Incident Report.
+      </p>
+    </div>
+  </div>
+
+  <div class="status-grid">
+    <div class="status-card">
+      <span>Analyse</span>
+      <div id="analysisScore">0</div>
+    </div>
+    <div class="status-card">
+      <span>Risiko</span>
+      <div id="riskScore">50</div>
+    </div>
+    <div class="status-card">
+      <span>Beweise</span>
+      <div id="evidenceScore">0</div>
+    </div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <main class="investigation-layout">
+
+    <section class="ch-card">
+      <span id="phaseBadge" class="badge">Phase 1</span>
+      <h2 id="phaseTitle"></h2>
+      <p id="phaseText"></p>
+
+      <div class="terminal forensic-terminal" id="evidenceBox"></div>
+    </section>
+
+    <section class="ch-card">
+      <h2>Deine Diagnose</h2>
+      <div id="options" class="forensic-options"></div>
+      <button class="primary" id="checkBtn">Diagnose prüfen</button>
+      <div id="feedback"></div>
+    </section>
+
+  </main>
+
+  <section class="ch-card report-card" id="reportCard" hidden>
+    <h2>Incident Report</h2>
+
+    <label for="causeSelect">Primäre Ursache</label>
+    <select id="causeSelect">
+      <option value="">Bitte wählen</option>
+      <option value="topic">Topic-Struktur passt nicht zur Subscription</option>
+      <option value="broker">Mosquitto-Broker ist nicht installiert</option>
+      <option value="http">HTTP ist deaktiviert</option>
+    </select>
+
+    <label for="qosSelect">Empfohlene QoS-Strategie</label>
+    <select id="qosSelect">
+      <option value="">Bitte wählen</option>
+      <option value="mixed">QoS 0 für Messwerte, QoS 1 für Status, QoS 2 für kritische Alarme</option>
+      <option value="all2">QoS 2 für alles</option>
+      <option value="all0">QoS 0 für alles</option>
+    </select>
+
+    <label for="lwtSelect">Empfohlene Offline-Erkennung</label>
+    <select id="lwtSelect">
+      <option value="">Bitte wählen</option>
+      <option value="lwt">Last Will auf novatech/halle1/cnc/fraese12/status = offline</option>
+      <option value="retainonly">Nur Retained Message auf Temperaturwert</option>
+      <option value="manual">Manuelle Kontrolle alle 24 Stunden</option>
+    </select>
+
+    <button class="primary" id="submitReportBtn">Incident Report abschließen</button>
+    <div id="reportFeedback"></div>
+  </section>
+
+  <div class="ch-footer">
+    Cloudhelden · Interaktive Lernaufgabe
+  </div>
+
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>

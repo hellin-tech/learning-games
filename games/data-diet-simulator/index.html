@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Diet Simulator</title>
+  <link rel="stylesheet" href="../../assets/css/cloudhelden.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="cloudhelden-app">
+
+  <div class="ch-header">
+    <img src="../../assets/images/cloudhelden-logo.png" class="ch-logo" alt="Cloudhelden">
+    <div>
+      <span class="badge">Edge · Datenreduktion</span>
+      <h1>Data Diet Simulator</h1>
+      <p>
+        Konfiguriere Edge-Filter für NovaTechs Sensoren.
+        Reduziere Datenmenge, ohne Alarme oder Trends zu verlieren.
+      </p>
+    </div>
+  </div>
+
+  <div class="status-grid">
+    <div class="status-card"><span>Rohdaten/s</span><div id="rawRate">2350</div></div>
+    <div class="status-card"><span>Nach Edge/s</span><div id="edgeRate">?</div></div>
+    <div class="status-card"><span>Reduktion</span><div id="reduction">?</div></div>
+  </div>
+
+  <div class="sim-layout">
+
+    <section class="ch-card">
+      <span id="sensorBadge" class="badge">Sensor 1</span>
+      <h2 id="sensorTitle"></h2>
+      <p id="sensorText"></p>
+
+      <div class="terminal sim-terminal" id="dataStream"></div>
+    </section>
+
+    <section class="ch-card">
+      <h2>Edge-Konfiguration</h2>
+
+      <label>Aggregationsfenster</label>
+      <select id="windowSelect"></select>
+
+      <label>Dead-Band</label>
+      <select id="deadbandSelect"></select>
+
+      <label>Alarmstrategie</label>
+      <select id="alarmSelect"></select>
+
+      <button class="primary" id="simulateBtn">Simulation starten</button>
+      <div id="feedback"></div>
+    </section>
+
+  </div>
+
+  <section class="ch-card result-card" id="summaryCard" hidden>
+    <h2>NovaTech Edge-Strategie</h2>
+    <div id="summary"></div>
+  </section>
+
+  <div class="ch-footer">Cloudhelden · Interaktive Lernaufgabe</div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
